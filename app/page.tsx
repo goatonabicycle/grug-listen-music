@@ -8,7 +8,7 @@ const Page = () => {
         Grug not serious review blog/site. Grug not know what Grug doing so no need angry.<br/>
         Grug write about what Grug hear and what Grug like.<br/>
         If Grug like Grug write<br/>
-        Grug say "Grug" too much? No!? Wat?
+        Grug say &quot;Grug&quot; too much? No!? Wat?
       </div>      
     </div>
   );
