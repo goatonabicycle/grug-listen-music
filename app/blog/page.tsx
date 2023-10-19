@@ -38,11 +38,12 @@ const Page = () => {
 
   return (
     <main>
-      <BlogPageLayout title="Recent Blog Posts">
+      <BlogPageLayout title="Recent shrines">
         {latestPost && (
           <BlogCard
-            key={latestPost.title}
-            title={latestPost.title}
+            key={latestPost.artist + " - " + latestPost.album}
+            artist={latestPost.artist}
+            album={latestPost.album}
             desc={latestPost.description}
             tags={latestPost.tags}
             date={latestPost.date}
@@ -56,7 +57,7 @@ const Page = () => {
                 "lg:[&>img]:mb-0 lg:text-lg lg:[&_h3]:text-2xl lg:[&_h3+p]:mt-[1em]",
               ],
             )}
-            priority
+            priority="true"
           />
         )}
         <RenderPosts posts={recentBlogs} />

@@ -6,6 +6,8 @@ const RenderPosts = ({ posts }: { posts: BlogPost[] }) => {
     <BlogCard
       key={post.title}
       title={post.title}
+      artist={post.album}
+      album={post.album}            
       desc={post.description}
       tags={post.tags}
       date={post.date}

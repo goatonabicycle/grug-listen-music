@@ -1,16 +1,14 @@
 const siteConfig = {
   title: "Grug Listen Music",
   description:
-    "A static minimalistic blog template powered by Next.js and Contentlayer.",
-  author: "Saurabh Charde",
+    "This will eventually be a real big boy website!",
+  author: "Grug",
   url: "https://nextjs-contentlayer-tailwind.vercel.app",
   siteImage: "/images/announcement-banner.png",
-  socials: {
-    github: "https://github.com/schardev",
-    linkedin: "https://linkedin.com/in/scharde",
+  socials: {    
     twitter: "https://twitter.com/saurabhcharde",
     telegram: "https://t.me/saurabhcharde",
-    email: "saurabhchardereal@gmail.com",
+    email: "GottaMakeThisEmail@protonmail.com",
     site: "https://schar.dev",
   },
   blog: {

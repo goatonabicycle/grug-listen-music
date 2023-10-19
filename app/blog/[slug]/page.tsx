@@ -33,10 +33,10 @@ export const generateMetadata = ({
   const post = allSortedBlogs.find((post) => post.slug === params.slug);
   if (!post) notFound();
 
-  const { title, description, date } = post;
-  const imgParams = new URLSearchParams({ title, date: formatDate(date) });
+  const { artist, album, description, date } = post;
+  const imgParams = new URLSearchParams({ title: artist + " - " + album, date: formatDate(date) });
   const image = post.image ?? `/api/og?${imgParams.toString()}`;
-  return generateCommonMeta({ title, description, image });
+  return generateCommonMeta({ title: artist + " - " + album, description, image });
 };
 
 const Page = ({ params }: { params: { slug: string } }) => {
@@ -59,7 +59,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
           "lg:text-base lg:leading-none",
         )}>
         <NavArrowLeft />
-        <span>Back to blog</span>
+        <span>Back</span>
       </Link>
       <div
         className={cn(
@@ -67,6 +67,17 @@ const Page = ({ params }: { params: { slug: string } }) => {
           "border-b border-b-borders",
           "lg:flex-row [&>*]:flex-1",
         )}>
+          {post.image && (
+          <div>
+            <Image
+              className="post-img shadow-md"
+              src={post.image}
+              alt={post.artist + " - " + post.album}
+              priority="true"
+              sizes="(min-width: 1200px) 100vw, 100vw"
+            />
+          </div>
+        )}
         <ProseLayout>
           <div
             className={cn(
@@ -79,7 +90,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
               {formatDate(post.date, "full")}
             </time>
           </div>
-          <h1 className="md:leading-tight">{post.title}</h1>
+          <h1 className="md:leading-tight">{post.artist + " - " + post.album}</h1>
           <p className="mt-0 lg:mt-0">{post.description}</p>
           {isArrayNotEmpty(post.tags) && (
             <div className={cn("flex gap-2 flex-wrap not-prose")}>
@@ -91,17 +102,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
             </div>
           )}
         </ProseLayout>
-        {post.image && (
-          <div>
-            <Image
-              className="post-img shadow-md"
-              src={post.image}
-              alt={post.title}
-              priority
-              sizes="(min-width: 1200px) 50vw, 100vw"
-            />
-          </div>
-        )}
+       
       </div>
       <div
         className={cn(

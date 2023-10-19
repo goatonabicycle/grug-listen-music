@@ -5,17 +5,19 @@ import Image from "@/components/image";
 
 type BlogCardProps = {
   img?: string;
-  date: Date | string;
-  title: string;
+  date: Date | string;  
+  artist: string;
+  album: string;
   desc: string;
   tags?: string[];
   href: string;
   className?: string;
-  priority?: boolean;
+  priority?: string | boolean;
 };
 
-const BlogCard = ({
-  title,
+const BlogCard = ({  
+  artist,
+  album,
   desc,
   tags,
   date,
@@ -27,13 +29,15 @@ const BlogCard = ({
   return (
     <article className={className}>
       {img && (
-        <Image
-          className="post-img mb-6"
-          src={img}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          alt={title}
-          priority={priority}
-        />
+        <Link href={href}>
+          <Image
+            className="post-img mb-6 opacity-80 hover:opacity-100"
+            src={img}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            alt={artist + " - " + album}
+            priority={priority}
+          />
+        </Link>
       )}
       <div>
         <p className={cn("text-accent text-sm font-medium mb-4")}>
@@ -43,7 +47,7 @@ const BlogCard = ({
           className={cn(
             "font-medium text-xl md:text-2xl mb-2 hover:underline",
           )}>
-          <Link href={href}>{title}</Link>
+          <Link href={href}>{artist} - {album}</Link>
         </h3>
         <p className={cn("text-foreground-secondary")}>{desc}</p>
         {isArrayNotEmpty(tags) && (

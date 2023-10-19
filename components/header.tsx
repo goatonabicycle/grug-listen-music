@@ -6,7 +6,7 @@ import ThemeProvider from "@/contexts/theme-provider";
 
 const navLinks = [
   { text: "Home", href: "/" },
-  { text: "Blog", href: "/blog" },
+  { text: "Shrines", href: "/blog" },
 ];
 
 const Header = () => {
