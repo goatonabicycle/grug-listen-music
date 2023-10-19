@@ -12,7 +12,7 @@ type BlogCardProps = {
   tags?: string[];
   href: string;
   className?: string;
-  priority?: string | boolean;
+  priority?: boolean;
 };
 
 const BlogCard = ({  

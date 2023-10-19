@@ -56,8 +56,8 @@ const Page = () => {
                 "lg:grid gap-8 grid-cols-2 lg:col-span-full",
                 "lg:[&>img]:mb-0 lg:text-lg lg:[&_h3]:text-2xl lg:[&_h3+p]:mt-[1em]",
               ],
-            )}
-            priority="true"
+            )}  
+            priority          
           />
         )}
         <RenderPosts posts={recentBlogs} />

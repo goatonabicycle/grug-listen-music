@@ -4,9 +4,8 @@ import BlogCard from "./blog-card";
 const RenderPosts = ({ posts }: { posts: BlogPost[] }) => {
   return posts.map((post) => (
     <BlogCard
-      key={post.title}
-      title={post.title}
-      artist={post.album}
+      key={post.artist + " - " + post.album}      
+      artist={post.artist}
       album={post.album}            
       desc={post.description}
       tags={post.tags}
