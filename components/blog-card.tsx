@@ -31,7 +31,7 @@ const BlogCard = ({
       {img && (
         <Link href={href}>
           <Image
-            className="post-img mb-6 opacity-80 hover:opacity-100"
+            className="post-img mb-6 hover:post-img-zoom transition duration-500"
             src={img}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             alt={artist + " - " + album}
