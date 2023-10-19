@@ -6,10 +6,10 @@ const siteConfig = {
   url: "https://nextjs-contentlayer-tailwind.vercel.app",
   siteImage: "/images/announcement-banner.png",
   socials: {    
-    twitter: "https://twitter.com/saurabhcharde",
-    telegram: "https://t.me/saurabhcharde",
+    twitter: "https://twitter.com/",
+    telegram: "https://t.me/",
     email: "GottaMakeThisEmail@protonmail.com",
-    site: "https://schar.dev",
+    site: "grugmusiclisten.com",
   },
   blog: {
     postPerPage: 10,
