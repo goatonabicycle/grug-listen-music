@@ -4,20 +4,20 @@ import Image from "@/components/image";
 
 type BlogCardHomeProps = {
   img?: string;
-  date: Date | string;  
+  date: Date | string;
   artist: string;
   album: string;
   href: string;
-  className?: string;  
+  className?: string;
 };
 
-const BlogCardHome = ({  
+const BlogCardHome = ({
   artist,
-  album,  
+  album,
   date,
   img,
   href,
-  className,  
+  className,
 }: BlogCardHomeProps) => {
   return (
     <article className={className}>
@@ -27,8 +27,8 @@ const BlogCardHome = ({
             className="post-img mb-6 hover:post-img-zoom transition duration-500"
             src={img}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            alt={artist + " - " + album}  
-            priority="false"      
+            alt={artist + " - " + album}
+            priority={false}
           />
         </Link>
       )}
@@ -40,8 +40,10 @@ const BlogCardHome = ({
           className={cn(
             "font-medium text-xl md:text-2xl mb-2 hover:underline",
           )}>
-          <Link href={href}>{artist} - {album}</Link>
-        </h3>                
+          <Link href={href}>
+            {artist} - {album}
+          </Link>
+        </h3>
       </div>
     </article>
   );
