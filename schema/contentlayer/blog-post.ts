@@ -8,7 +8,7 @@ const BlogPost = defineDocumentType(() => ({
   name: "BlogPost",
   contentType: "mdx",
   filePathPattern: "blog/**/*.mdx",
-  fields: {    
+  fields: {
     artist: {
       type: "string",
       description: "The title of the artist",

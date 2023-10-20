@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { GitHub, LinkedIn, Mail, Telegram, Twitter } from "iconoir-react";
 import Link from "./link";
 
-const socialLinks = [  
+const socialLinks = [
   { icon: Twitter, href: config.socials.twitter, title: "Twitter" },
   { icon: Telegram, href: config.socials.telegram, title: "Telegram" },
   { icon: Mail, href: `mailto:${config.socials.email}`, title: "Email" },
@@ -28,10 +28,16 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <div className="text-center">        
+      <div className="text-center">
         <p className="text-sm mt-2">
-          © {new Date().getFullYear()}, Grug Listen Music. All rights reserved.<br/>
-          Built using <a target="_blank" href="https://github.com/schardev/nextjs-contentlayer-blog">this awesome template</a>
+          © {new Date().getFullYear()}, Grug Listen Music. All rights reserved.
+          <br />
+          Built using{" "}
+          <a
+            target="_blank"
+            href="https://github.com/schardev/nextjs-contentlayer-blog">
+            this awesome template
+          </a>
         </p>
       </div>
     </footer>

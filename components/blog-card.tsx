@@ -5,7 +5,7 @@ import Image from "@/components/image";
 
 type BlogCardProps = {
   img?: string;
-  date: Date | string;  
+  date: Date | string;
   artist: string;
   album: string;
   desc: string;
@@ -15,7 +15,7 @@ type BlogCardProps = {
   priority?: boolean;
 };
 
-const BlogCard = ({  
+const BlogCard = ({
   artist,
   album,
   desc,
@@ -47,7 +47,9 @@ const BlogCard = ({
           className={cn(
             "font-medium text-xl md:text-2xl mb-2 hover:underline",
           )}>
-          <Link href={href}>{artist} - {album}</Link>
+          <Link href={href}>
+            {artist} - {album}
+          </Link>
         </h3>
         <p className={cn("text-foreground-secondary")}>{desc}</p>
         {isArrayNotEmpty(tags) && (

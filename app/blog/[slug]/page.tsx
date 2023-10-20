@@ -34,9 +34,16 @@ export const generateMetadata = ({
   if (!post) notFound();
 
   const { artist, album, description, date } = post;
-  const imgParams = new URLSearchParams({ title: artist + " - " + album, date: formatDate(date) });
+  const imgParams = new URLSearchParams({
+    title: artist + " - " + album,
+    date: formatDate(date),
+  });
   const image = post.image ?? `/api/og?${imgParams.toString()}`;
-  return generateCommonMeta({ title: artist + " - " + album, description, image });
+  return generateCommonMeta({
+    title: artist + " - " + album,
+    description,
+    image,
+  });
 };
 
 const Page = ({ params }: { params: { slug: string } }) => {
@@ -67,7 +74,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
           "border-b border-b-borders",
           "lg:flex-row [&>*]:flex-1",
         )}>
-          {post.image && (
+        {post.image && (
           <div>
             <Image
               className="post-img shadow-md"
@@ -90,7 +97,9 @@ const Page = ({ params }: { params: { slug: string } }) => {
               {formatDate(post.date, "full")}
             </time>
           </div>
-          <h1 className="md:leading-tight">{post.artist + " - " + post.album}</h1>
+          <h1 className="md:leading-tight">
+            {post.artist + " - " + post.album}
+          </h1>
           <p className="mt-0 lg:mt-0">{post.description}</p>
           {isArrayNotEmpty(post.tags) && (
             <div className={cn("flex gap-2 flex-wrap not-prose")}>
@@ -102,7 +111,6 @@ const Page = ({ params }: { params: { slug: string } }) => {
             </div>
           )}
         </ProseLayout>
-       
       </div>
       <div
         className={cn(
