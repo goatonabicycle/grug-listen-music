@@ -19,15 +19,7 @@ const Page = () => {
     return (
       <main className="min-h-screen flex flex-col items-center justify-center text-center">
         <p className="text-2xl lg:text-3xl mb-4">No posts found!</p>
-        <p>
-          See how to get started{" "}
-          <Link
-            href="https://github.com/schardev/nextjs-contentlayer-blog"
-            className="text-accent text-lg"
-            showIcon>
-            here
-          </Link>
-        </p>
+        <p>Nothing yet!</p>
       </main>
     );
 
