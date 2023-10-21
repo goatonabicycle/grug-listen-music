@@ -18,7 +18,10 @@ const Page = ({ params }: { params: { tag?: string[] } }) => {
 
   const tag = params.tag[0];
   const posts = allSortedBlogs.filter(
-    (post) => post.tags && post.tags.map((tag) => slugify(tag)).includes(tag),
+    (post) =>
+      post.tags &&
+      post.visible &&
+      post.tags.map((tag) => slugify(tag)).includes(tag),
   );
 
   return (
