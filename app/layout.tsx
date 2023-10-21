@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { fontSans } from "@/lib/fonts";
@@ -64,6 +66,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
