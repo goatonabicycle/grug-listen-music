@@ -63,10 +63,10 @@ export default function RootLayout({
           "text-foreground-primary bg-background min-h-screen font-sans",
           "selection:bg-accent selection:text-white",
         )}>
+        <Analytics />
         <Header />
         {children}
         <Footer />
-        <Analytics />
       </body>
     </html>
   );
