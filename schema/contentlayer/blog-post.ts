@@ -39,7 +39,7 @@ const BlogPost = defineDocumentType(() => ({
       description: "Post tags",
     },
     visible: {
-      type: "boolean",      
+      type: "boolean",
       description: "Should the post be visible on the site",
     },
     image: {

@@ -31,13 +31,6 @@ const Footer = () => {
       <div className="text-center">
         <p className="text-sm mt-2">
           © {new Date().getFullYear()}, Grug Listen Music. All rights reserved.
-          <br />
-          Built using{" "}
-          <a
-            target="_blank"
-            href="https://github.com/schardev/nextjs-contentlayer-blog">
-            this awesome template
-          </a>
         </p>
       </div>
     </footer>
