@@ -11,6 +11,10 @@ const tailwindConfig = {
   ],
   theme: {
     extend: {
+      flex: {
+        5: "5 5 0%",
+        7: "7 7 0%",
+      },
       colors: {
         accent: "hsl(var(--color-accent) / <alpha-value>)",
         background: {

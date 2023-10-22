@@ -50,12 +50,10 @@ const Page = ({ params }: { params: { slug: string } }) => {
   const post = allSortedBlogs.find((post) => post.slug === params.slug);
   if (!post) notFound();
 
-  const moreThanOneHeading = post.headings && post.headings.length > 1;
-
   return (
     <main
       className={cn(
-        "my-10 lg:my-16 xl:my-20 [--_space:2.5rem] lg:[--_space:5rem]",
+        "my-10 lg:my-16 xl:my-20 [--_space:1.5rem] lg:[--_space:2rem]",
       )}>
       <Link
         href="/blog"
@@ -72,10 +70,10 @@ const Page = ({ params }: { params: { slug: string } }) => {
         className={cn(
           "flex flex-col-reverse gap-8 pb-[--_space]",
           "border-b border-b-borders",
-          "lg:flex-row [&>*]:flex-1",
+          "lg:flex-row",
         )}>
         {post.image && (
-          <div>
+          <div className="lg:flex-5">
             <Image
               className="post-img shadow-md"
               src={post.image}
@@ -85,54 +83,47 @@ const Page = ({ params }: { params: { slug: string } }) => {
             />
           </div>
         )}
-        <ProseLayout>
-          <div
-            className={cn(
-              "not-prose text-foreground-secondary text-sm font-medium",
-              "flex gap-6 flex-wrap mb-6 lg:mb-10",
-              "[&_svg]:text-xs [&>*]:flex [&>*]:gap-2",
-            )}>
-            <time dateTime={post.date}>
-              <Calendar />
-              {formatDate(post.date, "full")}
-            </time>
-          </div>
-          <h1 className="md:leading-tight">
-            {post.artist + " - " + post.album}
-          </h1>
-          <p className="mt-0 lg:mt-0">{post.description}</p>
-          {isArrayNotEmpty(post.tags) && (
-            <div className={cn("flex gap-2 flex-wrap not-prose")}>
-              {post.tags.map((tag) => (
-                <Link key={tag} href={`/blog/tags/${slugify(tag)}`}>
-                  <PostTag>{tag}</PostTag>
-                </Link>
-              ))}
+        <div className="lg:flex-7">
+          <ProseLayout>
+            <div
+              className={cn(
+                "not-prose text-foreground-secondary text-sm font-medium",
+                "flex gap-6 flex-wrap mb-6 lg:mb-10",
+                "[&_svg]:text-xs [&>*]:flex [&>*]:gap-2",
+              )}>
+              <time dateTime={post.date}>
+                <Calendar />
+                {formatDate(post.date, "full")}
+              </time>
             </div>
-          )}
-        </ProseLayout>
+            <h1 className="md:leading-tight">
+              {post.artist}
+              <br />
+              {post.album}
+            </h1>
+            <p className="mt-0 lg:mt-0">{post.description}</p>
+            {isArrayNotEmpty(post.tags) && (
+              <div className={cn("flex gap-2 flex-wrap not-prose")}>
+                {post.tags.map((tag) => (
+                  <Link key={tag} href={`/blog/tags/${slugify(tag)}`}>
+                    <PostTag>{tag}</PostTag>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </ProseLayout>
+        </div>
       </div>
       <div
         className={cn(
           "mt-[--_space]",
           "xl:flex xl:flex-row-reverse xl:justify-between",
         )}>
-        {moreThanOneHeading && (
-          <TocDesktop
-            contents={post.headings}
-            className={cn(
-              "hidden sticky top-32 self-start flex-[0_0_25%] xl:block",
-            )}
-          />
-        )}
         <ProseLayout
           className={cn(
             "max-xl:mx-auto",
             post.headings.length < 1 && "mx-auto",
           )}>
-          {moreThanOneHeading && (
-            <TocMobile contents={post.headings} className="xl:hidden" />
-          )}
           <MDXContent code={post.body.code} />
         </ProseLayout>
         <ScrollButton />

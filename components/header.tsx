@@ -5,8 +5,9 @@ import { cn } from "@/lib/utils";
 import ThemeProvider from "@/contexts/theme-provider";
 
 const navLinks = [
-  { text: "Home", href: "/" },
+  { text: "Cave", href: "/" },
   { text: "Shrines", href: "/blog" },
+  { text: "Pals", href: "/pals" },
 ];
 
 const Header = () => {
