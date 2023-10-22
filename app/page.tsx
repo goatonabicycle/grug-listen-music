@@ -18,16 +18,16 @@ const Page = () => {
         <br />
         <br />
         <br />
-        Grug not serious review blog/site. Grug not know what Grug doing so no
-        need angry.
+        Grug not serious review blog/site. Grug not know what doing so no need
+        angry.
         <br />
-        Grug like music. Grug think you music like also. <br />
-        Grug write word on web place and you read! Grug also read but grug also
-        make word. <br />
-        Grug give think on thing like. Grug listen many music. Many music good.
-        Many music okay. Many music never hear! <br />
-        Grug write about what Grug hear and what Grug like. <br />
-        If Grug like Grug write <br />
+        Grug like music. Grug hope you music like also. <br />
+        Grug write word on web place and you read! Grug also read but also make
+        word. <br />
+        Grug give think on thing like. Listen many music. Many music good. Many
+        music okay. Many music never hear! <br />
+        Here write about what hear and what like. <br />
+        If Grug like then write - easy! <br />
         Grug say &quot;Grug&quot; too much? No!? Wat? <br />
         Grug happy to hear music. Send music here:{" "}
         <a href="mailto:gruglistenmusic@protonmail.com">

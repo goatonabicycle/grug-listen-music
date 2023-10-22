@@ -11,6 +11,10 @@ const Pals = () => {
           Last Rites
         </a>
         <br />
+        <a target="_blank" href="https://www.angrymetalguy.com/">
+          Angry Metal Guy
+        </a>
+        <br />
         <a target="_blank" href="https://www.invisibleoranges.com/">
           Invisible Oranges
         </a>
