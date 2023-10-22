@@ -8,7 +8,7 @@ const Page = () => {
   const recentBlogs = blogs.splice(0, 4);
 
   return (
-    <main className="px-10 min-h-screen flex flex-col items-center justify-center text-center">
+    <main className="px-10 py-10 min-h-screen flex flex-col items-center justify-center text-center">
       <Image
         className=""
         src={"/images/grug-cave.png"}
