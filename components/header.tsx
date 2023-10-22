@@ -6,7 +6,7 @@ import ThemeProvider from "@/contexts/theme-provider";
 
 const navLinks = [
   { text: "Cave", href: "/" },
-  { text: "Shrines", href: "/blog" },
+  { text: "Shrines", href: "/shrine" },
   { text: "Pals", href: "/pals" },
 ];
 

@@ -11,7 +11,7 @@ const siteConfig = {
     site: "grugmusiclisten.com",
   },
   blog: {
-    postPerPage: 10,
+    postPerPage: 9,
     openAllExternalLinksInNewTab: true,
   },
 };

@@ -4,11 +4,11 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogs = allBlogPosts.map((post) => ({
-    url: `${siteConfig.url}/blog/${post.slug}`,
+    url: `${siteConfig.url}/shrine/${post.slug}`,
     lastModified: post.lastmod ?? post.date,
   }));
 
-  const routes = ["", "/about", "/blog"].map((route) => ({
+  const routes = ["", "/pals", "/shrine"].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),
   }));

@@ -38,7 +38,7 @@ const Page = ({ params }: { params: { tag?: string[] } }) => {
         posts={posts}
         postPerPage={config.blog.postPerPage}
         page={1}
-        pageLink={`/blog/tags/${tag}/page`}
+        pageLink={`/shrine/tags/${tag}/page`}
       />
     </BlogPageLayout>
   );

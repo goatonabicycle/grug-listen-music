@@ -58,7 +58,7 @@ const Page = () => {
       <hr className="border-borders my-8 lg:my-12" />
 
       {blogs.length > 0 && (
-        <BlogPageLayout title="All Posts Posts">
+        <BlogPageLayout title="All Shrines">
           <PostPaginator posts={blogs} postPerPage={allPostsCount} page={1} />
         </BlogPageLayout>
       )}

@@ -72,7 +72,7 @@ const PostPaginator = ({
   page,
   postPerPage,
   posts,
-  pageLink = "/blog/page",
+  pageLink = "/shrine/page",
 }: {
   page: number;
   postPerPage: number;

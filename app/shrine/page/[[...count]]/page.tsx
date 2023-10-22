@@ -18,7 +18,7 @@ const Page = ({ params }: { params: { count?: string[] } }) => {
   if (!Number.isInteger(count) || count > totalPages) return notFound();
 
   return (
-    <BlogPageLayout title="All Blog Posts">
+    <BlogPageLayout title="All Shrines">
       <PostPaginator postPerPage={config.blog.postPerPage} page={count} />
     </BlogPageLayout>
   );

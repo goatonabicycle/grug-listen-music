@@ -1,6 +1,15 @@
+import Image from "@/components/image";
+
 const Pals = () => {
   return (
     <div className="min-h-screen flex flex-col gap-4 justify-center items-center">
+      <Image
+        className=""
+        src={"/images/grug-full.png"}
+        alt={"Grug cave home"}
+        priority
+        sizes="(min-width: 1200px) 100vw, 100vw"
+      />
       <div className="px-10 text-center">
         Grug have many pals look up to. <br />
         Pals do actual reviews and words. <br />
