@@ -13,7 +13,7 @@ const Page = () => {
     <div className="min-h-screen flex flex-col gap-4 justify-center items-center">
       <p className="text-2xl">Under construction!</p>
       <div className="px-10 text-center">
-        There will be an image of Grug in a hut or a cave here. It'll look
+        There will be an image of Grug in a hut or a cave here. It&apos;ll look
         colourful and awesome.
         <br />
         <br />
