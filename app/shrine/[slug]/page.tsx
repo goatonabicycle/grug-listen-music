@@ -105,7 +105,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
             {isArrayNotEmpty(post.tags) && (
               <div className={cn("flex gap-2 flex-wrap not-prose")}>
                 {post.tags.map((tag) => (
-                  <Link key={tag} href={`/blog/tags/${slugify(tag)}`}>
+                  <Link key={tag} href={`/shrine/tags/${slugify(tag)}`}>
                     <PostTag>{tag}</PostTag>
                   </Link>
                 ))}

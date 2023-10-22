@@ -40,7 +40,7 @@ const Page = () => {
             tags={latestPost.tags}
             date={latestPost.date}
             img={latestPost.image}
-            href={`/blog/${latestPost.slug}`}
+            href={`/shrine/${latestPost.slug}`}
             className={cn(
               // If sufficient blogs are present then make the most recent one
               // stand out from the rest
