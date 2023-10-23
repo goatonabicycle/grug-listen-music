@@ -20,8 +20,20 @@ const Pals = () => {
           Last Rites
         </a>
         <br />
+        <a target="_blank" href="https://cvltnation.com/">
+          CVLTNation
+        </a>
+        <br />
+        <a target="_blank" href="https://toiletovhell.com/">
+          Toilet ov Hell
+        </a>
+        <br />
         <a target="_blank" href="https://www.angrymetalguy.com/">
           Angry Metal Guy
+        </a>
+        <br />
+        <a target="_blank" href="https://echoesanddust.com/">
+          Echoes and Dust
         </a>
         <br />
         <a target="_blank" href="https://www.invisibleoranges.com/">
@@ -46,6 +58,10 @@ const Pals = () => {
         <br />
         <a target="_blank" href="https://www.ghostcultmag.com/">
           Ghost Cult Magazine
+        </a>
+        <br />
+        <a target="_blank" href="http://autothrall.blogspot.com/">
+          From the Dust Returned
         </a>
         <br />
         <a target="_blank" href="https://www.transcendedmusic.de/">
