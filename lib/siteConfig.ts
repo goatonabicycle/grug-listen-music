@@ -5,7 +5,7 @@ const siteConfig = {
   url: "https://gruglistenmusic.com",
   siteImage: "/images/grug-face.png",
   socials: {
-    twitter: "https://twitter.com/",
+    twitter: "https://twitter.com/GrugListenMusic",
     telegram: "https://t.me/",
     email: "gruglistenmusic@protonmail.com",
     site: "gruglistenmusic.com",

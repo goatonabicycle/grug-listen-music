@@ -5,7 +5,7 @@ import { allSortedBlogs } from "@/lib/contentlayer";
 
 const Page = () => {
   const blogs = [...allSortedBlogs];
-  const recentBlogs = blogs.splice(0, 4);
+  const recentBlogs = blogs.splice(0, 6);
 
   return (
     <main className="px-10 py-10 min-h-screen flex flex-col items-center justify-center text-center">
@@ -27,6 +27,7 @@ const Page = () => {
         Here write about what hear and what like. If Grug like then write -
         easy! <br />
         Grug say &quot;Grug&quot; too much? No!? Wat? <br />
+        <br />
         Grug happy to hear music. Send music here:{" "}
         <a href="mailto:gruglistenmusic@protonmail.com">
           gruglistenmusic@protonmail.com

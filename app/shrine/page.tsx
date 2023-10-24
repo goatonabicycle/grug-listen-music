@@ -24,9 +24,9 @@ const Page = () => {
     );
 
   const blogs = [...allSortedBlogs];
-  const recentBlogs = blogs.splice(0, 4);
+  const recentBlogs = blogs.splice(0, 3);
   const latestPost = recentBlogs.shift();
-  const allPostsCount = config.blog.postPerPage - 4;
+  const allPostsCount = config.blog.postPerPage - 3;
 
   return (
     <main>
@@ -41,14 +41,6 @@ const Page = () => {
             date={latestPost.date}
             img={latestPost.image}
             href={`/shrine/${latestPost.slug}`}
-            className={cn(
-              // If sufficient blogs are present then make the most recent one
-              // stand out from the rest
-              recentBlogs.length >= 3 && [
-                "lg:grid gap-8 grid-cols-2 lg:col-span-full",
-                "lg:[&>img]:mb-0 lg:text-lg lg:[&_h3]:text-2xl lg:[&_h3+p]:mt-[1em]",
-              ],
-            )}
             priority
           />
         )}
