@@ -13,7 +13,8 @@ const Pals = () => {
       <div className="px-10 text-center">
         Grug have many pals look up to. <br />
         Pals do actual reviews and words. <br />
-        Grug build little shrine for them here.
+        Grug build little shrine for them here. <br />
+        You click. You read.
         <br />
         <br />
         <a target="_blank" href="https://yourlastrites.com/">
