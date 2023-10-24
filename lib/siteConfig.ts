@@ -6,7 +6,7 @@ const siteConfig = {
   siteImage: "/images/grug-face.png",
   socials: {
     twitter: "https://twitter.com/GrugListenMusic",
-    telegram: "https://t.me/",
+    instagram: "https://t.me/",
     email: "gruglistenmusic@protonmail.com",
     site: "gruglistenmusic.com",
   },
