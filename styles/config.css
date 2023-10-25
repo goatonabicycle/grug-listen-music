@@ -7,8 +7,8 @@
 /* Colors */
 :root {
   /* light mode colors */
-  --color-accent: 26 90% 37%; /* hsl */
-  --color-background-primary: 60 9% 98%;
+  --color-accent: 26 10% 37%; /* hsl */
+  --color-background-primary: 26 20% 91%;
   --color-background-secondary: 60 5% 96%;
   --color-background-tertiary: 20 6% 90%;
   --color-text-primary: theme(colors.stone.950);
