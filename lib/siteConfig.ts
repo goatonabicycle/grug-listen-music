@@ -1,9 +1,9 @@
 const siteConfig = {
   title: "Grug Listen Music",
-  description: "This will eventually be a real big boy website!",
+  description: "Grug write words after listen music",
   author: "Grug",
   url: "https://gruglistenmusic.com",
-  siteImage: "/images/grug-face.png",
+  siteImage: "/images/grug-main.png",
   socials: {
     twitter: "https://twitter.com/GrugListenMusic",
     instagram: "https://t.me/",

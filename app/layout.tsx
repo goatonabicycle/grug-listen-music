@@ -46,7 +46,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    creator: `${config.socials.twitter.replace("https://twitter.com/", "@")}`,
+    creator: `${config.socials.twitter.replace(
+      "https://twitter.com/",
+      "@GrugListenMusic",
+    )}`,
   },
 };
 
