@@ -21,6 +21,10 @@ const Pals = () => {
           Last Rites
         </a>
         <br />
+        <a target="_blank" href="https://twitter.com/KManriffs">
+          KManriffs
+        </a>
+        <br />
         <a target="_blank" href="https://cvltnation.com/">
           CVLTNation
         </a>
@@ -72,6 +76,10 @@ const Pals = () => {
         <a target="_blank" href="https://canthisevenbecalledmusic.com/">
           Can This Even Be Called Music?
         </a>
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
       </div>
     </div>
