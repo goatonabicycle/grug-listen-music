@@ -18,8 +18,7 @@ const Page = () => {
       />
 
       <div className="px-10 py-10 text-center">
-        Grug not serious review blog/site. Grug not know what doing so no need
-        angry. Grug like music. Grug hope you music like also. <br />
+        Grug like music. Grug hope you music like also. <br />
         Grug write word on web place and you read! Grug also read but also make
         word. <br />
         Grug give think on thing like. Listen many music. Many music good. Many
