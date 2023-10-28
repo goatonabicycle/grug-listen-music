@@ -1,3 +1,4 @@
+import Image from "@/components/image";
 import config from "@/lib/siteConfig";
 import Link from "@/components/link";
 import ThemeToggle from "@/components/theme-toggle";
@@ -19,8 +20,22 @@ const Header = () => {
           "transition-colors",
         )}>
         <header className={cn("max-w-container-center flex items-center py-4")}>
-          <Link href="/" className={cn("text-lg font-bold mr-auto lg:text-xl")}>
-            {config.title}
+          <Link
+            href="/"
+            className={cn(
+              "flex items-center text-lg font-bold mr-auto lg:text-xl flex-wrap",
+            )}>
+            <span className="flex items-center">
+              <Image
+                className="inline-block mr-1"
+                src={"/images/Axe.png"}
+                alt={"Grug cave home"}
+                priority
+                sizes="(min-width: 1200px) 100vw, 100vw"
+                style={{ height: "2em", width: "auto" }}
+              />
+              {config.title}
+            </span>
           </Link>
           <nav>
             <ul className={cn("flex items-center gap-4 md:gap-6 lg:gap-8")}>
@@ -33,9 +48,6 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <ThemeToggle />
-              </li>
             </ul>
           </nav>
         </header>

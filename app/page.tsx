@@ -11,6 +11,13 @@ const Page = () => {
     <main className="px-10 py-10 min-h-screen flex flex-col items-center justify-center text-center">
       <Image
         className=""
+        src={"/images/header.png"}
+        alt={"Grug listen music"}
+        priority
+        sizes="(min-width: 1200px) 100vw, 100vw"
+      />
+      <Image
+        className=""
         src={"/images/grug-cave.png"}
         alt={"Grug cave home"}
         priority
