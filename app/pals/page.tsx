@@ -92,6 +92,10 @@ const Pals = () => {
               KManriffs
             </a>
             <br />
+            <a target="_blank" href="https://www.20buckspin.com/">
+              20 Buck Spin
+            </a>
+            <br />
             <a target="_blank" href="https://weregnomerecords.bandcamp.com/">
               WereGnome Records
             </a>
