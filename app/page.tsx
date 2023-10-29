@@ -8,7 +8,7 @@ const Page = () => {
   const recentBlogs = blogs.splice(0, 6);
 
   return (
-    <main className="px-10 py-10 min-h-screen flex flex-col items-center justify-center text-center">
+    <main className="px-10 min-h-screen flex flex-col items-center justify-center text-center">
       <Image
         className=""
         src={"/images/header.png"}
@@ -18,13 +18,13 @@ const Page = () => {
       />
       <Image
         className=""
-        src={"/images/grug-cave.png"}
+        src={"/images/Web Banner.png"}
         alt={"Grug cave home"}
         priority
         sizes="(min-width: 1200px) 100vw, 100vw"
       />
 
-      <div className="px-10 py-10 text-center">
+      <div className="px-5 py-10 text-center">
         Grug like music. Grug hope you music like also. <br />
         Grug write word on web place and you read! Grug also read but also make
         word. <br />
