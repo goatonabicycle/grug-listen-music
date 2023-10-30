@@ -58,10 +58,6 @@ const Pals = () => {
               Teeth of the Divine
             </a>
             <br />
-            <a target="_blank" href="https://thykingdomscvm.wordpress.com/">
-              Thy Kingdom Scvm
-            </a>
-            <br />
             <a target="_blank" href="https://www.heavyblogisheavy.com/">
               Heavy Blog Is Heavy
             </a>
