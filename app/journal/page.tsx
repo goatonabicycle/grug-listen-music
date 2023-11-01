@@ -16,6 +16,15 @@ const Pals = () => {
         </p>
 
         <p className="mb-4">
+          1 November 2023 - Grug get love from Crow Black Sky{" "}
+          <a
+            href="https://www.facebook.com/crowblacksky/posts/897158371970668"
+            target="_blank">
+            here
+          </a>
+        </p>
+
+        <p className="mb-4">
           30 October 2023 - Grug say Malokarpatan little bit Dungeon synth. Grug
           wrong oh no! Many love with Malokarpatan{" "}
           <a
