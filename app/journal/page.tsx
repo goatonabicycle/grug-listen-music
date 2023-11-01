@@ -19,7 +19,7 @@ const Pals = () => {
           30 October 2023 - Grug say Malokarpatan little bit Dungeon synth. Grug
           wrong oh no! Many love with Malokarpatan{" "}
           <a
-            href="www.facebook.com/malokarpatan/posts/673036138141096"
+            href="https://www.facebook.com/malokarpatan/posts/673036138141096"
             target="_blank">
             here
           </a>
