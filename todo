@@ -2,3 +2,4 @@
 - Add Grug pals page that links to other blogs.
 - Implement a search mechanism.
 - Some sort of staging mechanism to proofread before being published.
+    - This could be another folder maybe. Make it only visible with some sort of url param?
