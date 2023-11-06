@@ -99,7 +99,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
             <h1 className="md:leading-tight">
               {post.artist}
               <br />
-              {post.album}
+              <i>{post.album}</i>
             </h1>
             <p className="mt-0 lg:mt-0">{post.description}</p>
             {isArrayNotEmpty(post.tags) && (
