@@ -5,7 +5,7 @@ import { allSortedBlogs } from "@/lib/contentlayer";
 
 const Page = () => {
   const blogs = [...allSortedBlogs];
-  const recentBlogs = blogs.splice(0, 6);
+  const recentBlogs = blogs.splice(0, 3);
 
   return (
     <main className="px-10 min-h-screen flex flex-col items-center justify-center text-center">
@@ -52,6 +52,11 @@ const Page = () => {
           />
         ))}
       </BlogPageLayout>
+      <p className="px-5 py-10 text-center">
+        <a href="/shrine" className="text-accent text-2xl font-bold">
+          Look all shrine
+        </a>
+      </p>
     </main>
   );
 };
