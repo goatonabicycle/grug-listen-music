@@ -36,7 +36,7 @@ const Page = ({ params }: { params: { tag?: string[] } }) => {
       }>
       <PostPaginator
         posts={posts}
-        postPerPage={config.blog.postPerPage}
+        postPerPage={100}
         page={1}
         pageLink={`/shrine/tags/${tag}/page`}
       />
