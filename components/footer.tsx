@@ -1,10 +1,11 @@
 import config from "@/lib/siteConfig";
 import { cn } from "@/lib/utils";
-import { Mail, Instagram, Twitter } from "iconoir-react";
+import { Mail, Instagram, Twitter, Facebook } from "iconoir-react";
 import Link from "./link";
 
 const socialLinks = [
   { icon: Twitter, href: config.socials.twitter, title: "Twitter" },
+  { icon: Facebook, href: config.socials.facebook, title: "Facebook" },
   // { icon: Instagram, href: config.socials.instagram, title: "Instagram" },
   { icon: Mail, href: `mailto:${config.socials.email}`, title: "Email" },
 ];
