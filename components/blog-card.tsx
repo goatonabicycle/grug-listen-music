@@ -27,7 +27,7 @@ const BlogCard = ({
   priority = false,
 }: BlogCardProps) => {
   return (
-    <article className={className}>
+    <article className={className + " border border-white rounded"}>
       {img && (
         <Link href={href}>
           <Image
@@ -39,7 +39,7 @@ const BlogCard = ({
           />
         </Link>
       )}
-      <div>
+      <div className="px-3 py-2 text-center">
         <p className={cn("text-accent text-sm font-medium mb-4")}>
           {formatDate(date)}
         </p>
@@ -53,7 +53,10 @@ const BlogCard = ({
         </h3>
         <p className={cn("text-foreground-secondary")}>{desc}</p>
         {isArrayNotEmpty(tags) && (
-          <div className={cn("mt-4 flex gap-2 flex-wrap")}>
+          <div
+            className={cn(
+              "mt-4 px-3 py-3 flex gap-2 flex-wrap justify-center",
+            )}>
             {tags.map((tag) => (
               <Link key={tag} href={`/shrine/tags/${slugify(tag)}`}>
                 <PostTag>{tag}</PostTag>

@@ -20,7 +20,7 @@ const BlogCardHome = ({
   className,
 }: BlogCardHomeProps) => {
   return (
-    <article className={className}>
+    <article className={className + " border border-white rounded"}>
       {img && (
         <Link href={href}>
           <Image
@@ -38,10 +38,10 @@ const BlogCardHome = ({
         </p>
         <h3
           className={cn(
-            "font-medium text-xl md:text-2xl mb-2 hover:underline",
+            "font-medium text-xl md:text-2xl mb-2 hover:underline px-3 py-2",
           )}>
           <Link href={href}>
-            {artist} - {album}
+            {artist} - <i>{album}</i>
           </Link>
         </h3>
       </div>
