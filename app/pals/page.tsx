@@ -38,6 +38,10 @@ const Pals = () => {
               Small Albums
             </a>
             <br />
+            <a target="_blank" href="https://fortherabbits.net/">
+              For the Rabbits
+            </a>
+            <br />
             <a target="_blank" href="https://www.angrymetalguy.com/">
               Angry Metal Guy
             </a>
@@ -46,32 +50,32 @@ const Pals = () => {
               Echoes and Dust
             </a>
             <br />
-            <a target="_blank" href="https://www.invisibleoranges.com/">
-              Invisible Oranges
+            <a target="_blank" href="https://www.nocleansinging.com/">
+              No Clean Singing
             </a>
             <br />
-            <a target="_blank" href="https://everythingisnoise.net/">
-              Everything Is Noise
+            <a target="_blank" href="https://www.invisibleoranges.com/">
+              Invisible Oranges
             </a>
             <br />
             <a target="_blank" href="https://www.teethofthedivine.com/">
               Teeth of the Divine
             </a>
             <br />
-            <a target="_blank" href="https://www.heavyblogisheavy.com/">
-              Heavy Blog Is Heavy
+            <a target="_blank" href="https://everythingisnoise.net/">
+              Everything Is Noise
             </a>
             <br />
-            <a target="_blank" href="https://www.nocleansinging.com/">
-              NO CLEAN SINGING
+            <a target="_blank" href="https://www.heavyblogisheavy.com/">
+              Heavy Blog Is Heavy
             </a>
             <br />
             <a target="_blank" href="https://www.ghostcultmag.com/">
               Ghost Cult Magazine
             </a>
             <br />
-            <a target="_blank" href="http://autothrall.blogspot.com/">
-              From the Dust Returned
+            <a target="_blank" href="https://varioussmallflames.co.uk/">
+              Various Small Flames
             </a>
             <br />
             <a target="_blank" href="https://www.transcendedmusic.de/">
@@ -92,8 +96,17 @@ const Pals = () => {
               20 Buck Spin
             </a>
             <br />
+            <a target="_blank" href="http://audioantihero.com/">
+              Audio Antihero
+            </a>
+            <br />
+
             <a target="_blank" href="https://weregnomerecords.bandcamp.com/">
               WereGnome Records
+            </a>
+            <br />
+            <a target="_blank" href="http://sentientruin.com/main">
+              Sentient Ruin Laboratories
             </a>
           </div>
         </div>
