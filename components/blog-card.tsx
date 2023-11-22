@@ -45,10 +45,10 @@ const BlogCard = ({
         </p>
         <h3
           className={cn(
-            "font-medium text-xl md:text-2xl mb-2 hover:underline",
+            "font-medium text-xl md:text-2xl mb-2 hover:underline px-3",
           )}>
           <Link href={href}>
-            {artist} - {album}
+            {artist} - <i>{album}</i>
           </Link>
         </h3>
         <p className={cn("text-foreground-secondary")}>{desc}</p>
