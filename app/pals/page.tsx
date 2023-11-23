@@ -17,7 +17,7 @@ const Pals = () => {
           You click. You read.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-40">
           <div>
             <p className="mb-4">
               Pals do actual reviews and words. <br />
@@ -40,6 +40,10 @@ const Pals = () => {
             <br />
             <a target="_blank" href="https://fortherabbits.net/">
               For the Rabbits
+            </a>
+            <br />
+            <a target="_blank" href="https://www.goldflakepaint.co.uk/">
+              Gold Flake Paint
             </a>
             <br />
             <a target="_blank" href="https://www.angrymetalguy.com/">
