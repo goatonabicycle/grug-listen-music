@@ -23,23 +23,17 @@ const Page = () => {
         priority
         sizes="(min-width: 1200px) 100vw, 100vw"
       />
-
-      <div className="px-5 py-10 text-center">
-        Grug like music. Grug hope you music like also. <br />
-        Grug write word on web place and you read! Grug also read but also make
-        word. <br />
-        Grug give think on thing like. Listen many music. Many music good. Many
-        music okay. Many music never hear! <br />
+      <div className="px-5 py-5 text-center">
+        Grug like music. <br />
+        Hope you music like also. <br />
+        Here write word on web place and you read! <br />
+        Grug give think on thing like. Listen many music. <br />
+        Many music good. Many music okay. Many music never hear! <br />
         Here write about what hear and what like. If Grug like then write -
         easy! <br />
-        Grug say &quot;Grug&quot; too much? No!? Wat? <br />
-        <br />
-        Grug happy to hear music. Send music here:{" "}
-        <a href="mailto:gruglistenmusic@protonmail.com">
-          gruglistenmusic@protonmail.com
-        </a>
+        Grug say &quot;Grug&quot; too much? No!? Wat? Grug give all music 5
+        fires out of 5? Yes!
       </div>
-
       <BlogPageLayout title="Recent shrines">
         {recentBlogs.map((post) => (
           <BlogCardHome

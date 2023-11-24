@@ -33,6 +33,12 @@ const Footer = () => {
         <p className="text-sm mt-2">
           © {new Date().getFullYear()}, Grug Listen Music. All rights reserved.
         </p>
+        <p className="text-sm mt-2">
+          Grug happy to hear music. <br />
+          <a className="prose" href="mailto:gruglistenmusic@protonmail.com">
+            gruglistenmusic@protonmail.com
+          </a>
+        </p>
       </div>
     </footer>
   );
