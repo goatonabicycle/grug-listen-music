@@ -125,6 +125,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
             post.headings.length < 1 && "mx-auto",
           )}>
           <MDXContent code={post.body.code} />
+          <div className="py-5">Grug Rate: 🔥🔥🔥🔥🔥 (5 out of 5 fires)</div>
         </ProseLayout>
         <ScrollButton />
       </div>
