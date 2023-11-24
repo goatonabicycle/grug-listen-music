@@ -17,6 +17,7 @@ const Footer = () => {
         "flex flex-col items-center gap-8 px-2 py-10 lg:py-12",
         "border-t border-borders text-foreground-secondary",
       )}>
+      Send Grug music
       <div className="flex gap-4 justify-center">
         {socialLinks.map((link) => (
           <Link
@@ -32,12 +33,6 @@ const Footer = () => {
       <div className="text-center">
         <p className="text-sm mt-2">
           © {new Date().getFullYear()}, Grug Listen Music. All rights reserved.
-        </p>
-        <p className="text-sm mt-2">
-          Grug happy to hear music. <br />
-          <a className="prose" href="mailto:gruglistenmusic@protonmail.com">
-            gruglistenmusic@protonmail.com
-          </a>
         </p>
       </div>
     </footer>
