@@ -16,6 +16,15 @@ const Pals = () => {
         </p>
 
         <p className="mb-4">
+          25 November 2023 - Grug get love from Valdrin{" "}
+          <a
+            href="https://www.facebook.com/valdrinausadjur/posts/695332339242907"
+            target="_blank">
+            here
+          </a>
+        </p>
+
+        <p className="mb-4">
           9 November 2023 - Grug get love from Tetragrammacide{" "}
           <a
             href="https://www.facebook.com/tetragrammacide/posts/763748872429726"
