@@ -30,12 +30,20 @@ const Pals = () => {
               CVLTNation
             </a>
             <br />
+            <a target="_blank" href="https://noobheavy.com/">
+              Noob Heavy
+            </a>
+            <br />
             <a target="_blank" href="https://toiletovhell.com/">
               Toilet ov Hell
             </a>
             <br />
             <a target="_blank" href="https://www.smallalbums.com/">
               Small Albums
+            </a>
+            <br />
+            <a target="_blank" href="https://machinemusic.net/">
+              Machine Music
             </a>
             <br />
             <a target="_blank" href="https://fortherabbits.net/">
@@ -74,16 +82,8 @@ const Pals = () => {
               Heavy Blog Is Heavy
             </a>
             <br />
-            <a target="_blank" href="https://www.ghostcultmag.com/">
-              Ghost Cult Magazine
-            </a>
-            <br />
             <a target="_blank" href="https://varioussmallflames.co.uk/">
               Various Small Flames
-            </a>
-            <br />
-            <a target="_blank" href="https://www.transcendedmusic.de/">
-              Transcended Music Blog
             </a>
             <br />
             <a target="_blank" href="https://canthisevenbecalledmusic.com/">
