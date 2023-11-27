@@ -6,6 +6,7 @@ const Pals = () => {
       name: "Last Rites",
       url: "https://yourlastrites.com/",
     },
+
     {
       name: "CVLTNation",
       url: "https://cvltnation.com/",
@@ -13,6 +14,10 @@ const Pals = () => {
     {
       name: "Noob Heavy",
       url: "https://noobheavy.com/",
+    },
+    {
+      name: "Mostly Metal",
+      url: "https://mostly-metal.net/",
     },
     {
       name: "Toilet ov Hell",
