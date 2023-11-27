@@ -7,7 +7,7 @@ const siteConfig = {
   socials: {
     twitter: "https://twitter.com/GrugListenMusic",
     facebook: "https://www.facebook.com/profile.php?id=61552866300273",
-    instagram: "https://t.me/",
+    instagram: "https://www.instagram.com/gruglistenmusic/",
     email: "gruglistenmusic@protonmail.com",
     site: "gruglistenmusic.com",
   },
