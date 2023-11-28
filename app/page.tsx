@@ -5,7 +5,7 @@ import { allSortedBlogs } from "@/lib/contentlayer";
 
 const Page = () => {
   const blogs = [...allSortedBlogs];
-  const recentBlogs = blogs.splice(0, 3);
+  const recentBlogs = blogs.splice(0, 6);
 
   return (
     <main className="px-10 min-h-screen flex flex-col items-center justify-center text-center">
