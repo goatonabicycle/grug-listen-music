@@ -14,6 +14,11 @@ const navLinks = [
 const Header = () => {
   return (
     <ThemeProvider>
+      <script
+        async
+        defer
+        src="https://eu.umami.is/script.js"
+        data-website-id="54b55c94-683b-48b5-92b3-3a67df36755b"></script>
       <div
         className={cn(
           "sticky top-0 z-10 backdrop-blur-[10px] bg-background/80 shadow-sm",
