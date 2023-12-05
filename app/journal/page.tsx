@@ -16,6 +16,25 @@ const Pals = () => {
         </p>
 
         <p className="mb-4">
+          5 December 2023 - Grug get love from the spidery Krallice{" "}
+          <a
+            href="https://www.facebook.com/krallice/posts/888087486209436"
+            target="_blank">
+            here
+          </a>
+        </p>
+
+        <p className="mb-4">
+          1 December 2023 - Grug get love from amazing Dis Pater in Midnight
+          Odyssey{" "}
+          <a
+            href="https://www.facebook.com/midnightodyssey/posts/925108582313559"
+            target="_blank">
+            here
+          </a>
+        </p>
+
+        <p className="mb-4">
           25 November 2023 - Grug get love from Valdrin{" "}
           <a
             href="https://www.facebook.com/valdrinausadjur/posts/695332339242907"
