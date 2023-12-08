@@ -16,6 +16,21 @@ const Pals = () => {
         </p>
 
         <p className="mb-4">
+          7 December 2023 - Grug announce Khodumodumo{" "}
+          <a
+            href="https://www.facebook.com/permalink.php?story_fbid=122116311356095543&id=61552866300273"
+            target="_blank">
+            here
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://twitter.com/GrugListenMusic/status/1732896436998623505"
+            target="_blank">
+            here
+          </a>
+        </p>
+
+        <p className="mb-4">
           5 December 2023 - Grug get love from the spidery Krallice{" "}
           <a
             href="https://www.facebook.com/krallice/posts/888087486209436"
