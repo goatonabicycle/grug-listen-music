@@ -83,9 +83,14 @@ const Pals = () => {
       url: "https://twitter.com/KManriffs",
     },
     {
+      name: "BeaverMosh",
+      url: "https://www.youtube.com/@beavermosh4401",
+    },
+    {
       name: "Audio Antihero",
       url: "http://audioantihero.com/",
     },
+
     {
       name: "WereGnome Records",
       url: "https://weregnomerecords.bandcamp.com/",
