@@ -19,8 +19,8 @@ const Pals = () => {
           8 December 2023 - Grug mentioned on Beavermosh{" "}
           <a href="https://www.youtube.com/watch?v=6DElo5Gl4bM" target="_blank">
             here
-          </a> at 47:26 
-          . WTF!
+          </a>{" "}
+          at 47:26. WTF!
         </p>
 
         <p className="mb-4">
