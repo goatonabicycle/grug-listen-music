@@ -16,6 +16,14 @@ const Pals = () => {
         </p>
 
         <p className="mb-4">
+          8 December 2023 - Grug mentioned on Beavermosh{" "}
+          <a href="https://www.youtube.com/watch?v=6DElo5Gl4bM" target="_blank">
+            here
+          </a> at 47:26 
+          . WTF!
+        </p>
+
+        <p className="mb-4">
           7 December 2023 - Grug announce Khodumodumo{" "}
           <a
             href="https://www.facebook.com/permalink.php?story_fbid=122116311356095543&id=61552866300273"
