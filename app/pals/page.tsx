@@ -126,7 +126,7 @@ const Pals = () => {
 
             {pals.map((pal) => (
               <div key={pal.name}>
-                <a href={pal.url} target="_blank">
+                <a href={pal.url} target="_blank" className="underline">
                   {pal.name}
                 </a>
               </div>
@@ -136,7 +136,7 @@ const Pals = () => {
             <h2 className="mb-4">Pals do best things with music.</h2>
             {others.map((pal) => (
               <div key={pal.name}>
-                <a href={pal.url} target="_blank">
+                <a href={pal.url} target="_blank" className="underline">
                   {pal.name}
                 </a>
               </div>
