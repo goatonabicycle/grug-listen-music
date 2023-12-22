@@ -114,16 +114,13 @@ const Page = ({ params }: { params: { slug: string } }) => {
           </ProseLayout>
         </div>
       </div>
+
       <div
         className={cn(
           "mt-[--_space]",
           "xl:flex xl:flex-row-reverse xl:justify-between",
         )}>
-        <ProseLayout
-          className={cn(
-            "max-xl:mx-auto",
-            post.headings.length < 1 && "mx-auto",
-          )}>
+        <ProseLayout className={cn("max-xl:mx-auto", "mx-auto")}>
           <MDXContent code={post.body.code} />
           <div className="py-5">Grug Rate: 🔥🔥🔥🔥🔥 (5 out of 5 fires)</div>
         </ProseLayout>
