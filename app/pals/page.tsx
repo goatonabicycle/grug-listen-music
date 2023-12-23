@@ -90,7 +90,10 @@ const Pals = () => {
       name: "Audio Antihero",
       url: "http://audioantihero.com/",
     },
-
+    {
+      name: "Fiadh Productions",
+      url: "https://fiadh.bandcamp.com/",
+    },
     {
       name: "WereGnome Records",
       url: "https://weregnomerecords.bandcamp.com/",
