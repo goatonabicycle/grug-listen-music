@@ -99,6 +99,10 @@ const Pals = () => {
       url: "https://weregnomerecords.bandcamp.com/",
     },
     {
+      name: "Vita Detestabilis Records",
+      url: "https://vitadetestabilisrecords.bandcamp.com/",
+    },
+    {
       name: "Sentient Ruin Laboratories",
       url: "http://sentientruin.com/main",
     },
