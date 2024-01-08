@@ -28,12 +28,12 @@ const Pals = () => {
       url: "https://www.smallalbums.com/",
     },
     {
-      name: "Machine Music",
-      url: "https://machinemusic.net/",
+      name: "A Closer Listen",
+      url: "https://acloserlisten.com/",
     },
     {
-      name: "For the Rabbits",
-      url: "https://fortherabbits.net/",
+      name: "Machine Music",
+      url: "https://machinemusic.net/",
     },
     {
       name: "Gold Flake Paint",

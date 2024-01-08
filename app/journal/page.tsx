@@ -1,6 +1,6 @@
 import Image from "@/components/image";
 
-const Pals = () => {
+const Journal = () => {
   return (
     <div className="min-h-screen flex flex-col gap-4 justify-center items-center">
       <Image
@@ -121,4 +121,4 @@ const Pals = () => {
   );
 };
 
-export default Pals;
+export default Journal;
