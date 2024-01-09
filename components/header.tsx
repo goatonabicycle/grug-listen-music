@@ -1,7 +1,6 @@
 import Image from "@/components/image";
 import config from "@/lib/siteConfig";
 import Link from "@/components/link";
-import ThemeToggle from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import ThemeProvider from "@/contexts/theme-provider";
 
