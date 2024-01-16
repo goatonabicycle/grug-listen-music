@@ -30,7 +30,8 @@ export const generateMetadata = ({
 }: {
   params: { slug: string };
 }): Metadata => {
-  const post = allSortedBlogs.find((post) => post.slug === params.slug);
+  const decodedSlug = decodeURIComponent(params.slug);
+  const post = allSortedBlogs.find((post) => post.slug === decodedSlug);
   if (!post) notFound();
 
   const { artist, album, description, date } = post;
@@ -47,7 +48,8 @@ export const generateMetadata = ({
 };
 
 const Page = ({ params }: { params: { slug: string } }) => {
-  const post = allSortedBlogs.find((post) => post.slug === params.slug);
+  const decodedSlug = decodeURIComponent(params.slug);
+  const post = allSortedBlogs.find((post) => post.slug === decodedSlug);
   if (!post) notFound();
 
   return (
