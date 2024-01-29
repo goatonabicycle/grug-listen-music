@@ -79,6 +79,10 @@ const Pals = () => {
 
   const others = [
     {
+      name: "jtextreme",
+      url: "https://jtextreme.com/",
+    },
+    {
       name: "sEYEmon",
       url: "https://twitter.com/sEYEmon",
     },
