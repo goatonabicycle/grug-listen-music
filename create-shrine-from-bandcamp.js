@@ -18,18 +18,14 @@ async function scrapeBandcamp(url) {
     const description = $(".tralbumData.tralbum-about").text().trim();
     const imageUrl = $("a.popupImage").attr("href");
     const tags = $(".tralbumData.tralbum-tags a.tag")
-      .map((i, el) => $(el).text().trim())
+      .map((_, el) => $(el).text().trim())
       .get();
 
-    let bandcampEmbedCode = "";
-    const htmlContent = response.data;
-    const albumIdCommentMatch = htmlContent.match(/<!-- album id (\d+) -->/);
-    if (albumIdCommentMatch && albumIdCommentMatch.length > 1) {
-      bandcampEmbedCode = albumIdCommentMatch[1];
-    }
+    const albumIdCommentMatch = response.data.match(/<!-- album id (\d+) -->/);
+    const bandcampEmbedCode = albumIdCommentMatch ? albumIdCommentMatch[1] : "";
 
     const tracklist = $(".track_list .track_row_view")
-      .map((i, el) => ({
+      .map((_, el) => ({
         trackNumber: $(el)
           .find(".track-number-col .track_number")
           .text()
@@ -43,10 +39,10 @@ async function scrapeBandcamp(url) {
       artistName,
       albumName,
       description,
+      imageUrl,
       tags,
       bandcampEmbedCode,
       tracklist,
-      imageUrl,
     };
   } catch (error) {
     console.error("Error scraping Bandcamp:", error);
@@ -59,67 +55,63 @@ function sanitizeFileName(name) {
 }
 
 async function downloadImage(url, imagePath) {
-  const response = await axios({
-    url,
-    method: "GET",
-    responseType: "stream",
-  });
+  try {
+    const response = await axios({
+      url,
+      method: "GET",
+      responseType: "stream",
+    });
 
-  const writer = fs.createWriteStream(imagePath);
-  response.data.pipe(writer);
+    const writer = fs.createWriteStream(imagePath);
+    response.data.pipe(writer);
 
-  return new Promise((resolve, reject) => {
-    writer.on("finish", resolve);
-    writer.on("error", reject);
-  });
+    return new Promise((resolve, reject) => {
+      writer.on("finish", resolve);
+      writer.on("error", reject);
+    });
+  } catch (error) {
+    console.error("Error downloading image:", error);
+    throw error;
+  }
 }
 
 function getFormattedDate() {
   const date = new Date();
-  const year = date.getFullYear();
-  const month = ("0" + (date.getMonth() + 1)).slice(-2);
-  const day = ("0" + date.getDate()).slice(-2);
-  return { formattedDate: `${year}-${month}-${day}`, year };
+  return {
+    formattedDate: date.toISOString().split("T")[0],
+    year: date.getFullYear(),
+  };
 }
 
-async function generateContent(bandcampURL) {
-  const {
-    artistName,
-    albumName,
-    description,
-    tags,
-    bandcampEmbedCode,
-    tracklist,
-    imageUrl,
-  } = await scrapeBandcamp(bandcampURL);
-
+async function generateBlogContent(bandcampURL) {
+  const albumData = await scrapeBandcamp(bandcampURL);
   const { formattedDate, year } = getFormattedDate();
 
-  const safeArtistName = sanitizeFileName(artistName);
-  const safeAlbumName = sanitizeFileName(albumName);
+  const safeArtistName = sanitizeFileName(albumData.artistName);
+  const safeAlbumName = sanitizeFileName(albumData.albumName);
   const imagePath = `./public/images/album/${safeArtistName}-${safeAlbumName}.jpg`;
 
-  let songTitles = tracklist
+  let songTitles = albumData.tracklist
     .map(
       (track, index) => `${index + 1}. ${track.trackTitle} \`0:00\` - Moment`,
     )
     .join("\n");
 
   const content = `---
-artist: "${artistName}"
-album: "${albumName}"
+artist: "${albumData.artistName}"
+album: "${albumData.albumName}"
 description: ""
 date: "${formattedDate}"
 image: "${imagePath.replace("./public", "")}"
 tags:
-  - ${tags.map((tag) => `"${tag}"`).join("\n  - ")}
+  - ${albumData.tags.map((tag) => `"${tag}"`).join("\n  - ")}
   - "${year}"
 visible: false
 ---
 
 [Words about album will go here]
 
-Description from bandcamp: ${description}
+Description from bandcamp: ${albumData.description}
 
 Grug favourite parts:
 
@@ -128,64 +120,64 @@ ${songTitles}
 Listen/buy here:
 
 <iframe
-  style={{ border: "0", width: "350px", height: "830px" }}
-  src="https://bandcamp.com/EmbeddedPlayer/album=${bandcampEmbedCode}/size=large/bgcol=333333/linkcol=ffffff/transparent=true/"
+  style={{ border: "0", width: "350px", height: "800px" }}
+  src="https://bandcamp.com/EmbeddedPlayer/album=${
+    albumData.bandcampEmbedCode
+  }/size=large/bgcol=333333/linkcol=ffffff/transparent=true/" 
   seamless>
   <a href="${bandcampURL}">
-    ${albumName} by ${artistName}
+    ${albumData.albumName} by ${albumData.artistName}
   </a>
 </iframe>
 `;
 
-  if (imageUrl) {
-    await downloadImage(imageUrl, imagePath);
-  }
-
-  return { content, year, artistName, albumName, imagePath };
+  return { content, year, albumData, imagePath };
 }
 
-async function writeToFile(
-  content,
-  year,
-  artistName,
-  albumName,
-  imagePath,
-  imageUrl,
-) {
-  const dir = path.join(__dirname, `content/blog/${year}`);
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+async function writeContentToFile(generatedContent) {
+  const dirPath = path.join(__dirname, `content/blog/${generatedContent.year}`);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
   }
 
-  const fileName = `${sanitizeFileName(artistName)}-${sanitizeFileName(
-    albumName,
-  )}.mdx`;
-  const filePath = path.join(dir, fileName);
+  const fileName = `${sanitizeFileName(
+    generatedContent.albumData.artistName,
+  )}-${sanitizeFileName(generatedContent.albumData.albumName)}.mdx`;
+  const filePath = path.join(dirPath, fileName);
 
-  fs.writeFile(filePath, content, (err) => {
-    if (err) throw err;
+  fs.writeFile(filePath, generatedContent.content, (err) => {
+    if (err) {
+      console.error("Error writing to file:", err);
+      throw err;
+    }
     console.log(`****************************************`);
-    console.log(`The file has been saved, nice!`);
+    console.log(`File saved, nice!`);
     console.log(`See here: ${filePath}`);
     console.log(`****************************************`);
   });
 
-  if (imageUrl) {
-    await downloadImage(imageUrl, imagePath);
+  if (generatedContent.albumData.imageUrl) {
+    await downloadImage(
+      generatedContent.albumData.imageUrl,
+      generatedContent.imagePath,
+    );
   }
 }
 
 async function main() {
-  const bandcampURL = process.argv[2];
-  if (!bandcampURL) {
-    console.error("Please provide a Bandcamp album URL.");
-    process.exit(1);
-  }
+  try {
+    const bandcampURL = process.argv[2];
+    if (!bandcampURL) {
+      throw new Error("Please provide a Bandcamp album URL.");
+    }
 
-  const { content, year, artistName, albumName, imagePath, imageUrl } =
-    await generateContent(bandcampURL);
-  await writeToFile(content, year, artistName, albumName, imagePath, imageUrl);
+    const generatedContent = await generateBlogContent(bandcampURL);
+    await writeContentToFile(generatedContent, bandcampURL);
+
+    console.log("Empty shrine build. Now must write!");
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
 }
 
 main();
