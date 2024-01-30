@@ -114,7 +114,7 @@ image: "${imagePath.replace("./public", "")}"
 tags:
   - ${tags.map((tag) => `"${tag}"`).join("\n  - ")}
   - "${year}"
-visible: true
+visible: false
 ---
 
 [Words about album will go here]
