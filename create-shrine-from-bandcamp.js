@@ -16,6 +16,7 @@ async function scrapeBandcamp(url) {
     const artistName = $("#name-section h3 span a").text().trim();
     const albumName = $(".trackTitle").first().text().trim();
     const description = $(".tralbumData.tralbum-about").text().trim();
+    const imageUrl = $("a.popupImage").attr("href");
     const tags = $(".tralbumData.tralbum-tags a.tag")
       .map((i, el) => $(el).text().trim())
       .get();
@@ -38,16 +39,12 @@ async function scrapeBandcamp(url) {
       }))
       .get();
 
-    // Extracting the large album cover image URL
-    const imageUrl = $("a.popupImage").attr("href");
-
     return {
       artistName,
       albumName,
       description,
       tags,
       bandcampEmbedCode,
-      bandcampLink: url,
       tracklist,
       imageUrl,
     };
@@ -185,8 +182,6 @@ async function main() {
     console.error("Please provide a Bandcamp album URL.");
     process.exit(1);
   }
-
-  console.log({ bandcampURL });
 
   const { content, year, artistName, albumName, imagePath, imageUrl } =
     await generateContent(bandcampURL);
