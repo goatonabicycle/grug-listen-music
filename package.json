@@ -16,6 +16,8 @@
     "@next/bundle-analyzer": "^13.5.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@vercel/analytics": "^1.1.1",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.0.0",
     "github-slugger": "^2.0.0",
     "image-size": "^1.0.2",
