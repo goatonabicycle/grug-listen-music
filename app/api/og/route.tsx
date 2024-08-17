@@ -1,7 +1,25 @@
 import config from "@/lib/siteConfig";
-import { ImageResponse } from "next/server";
+import { ImageResponse as OriginalImageResponse } from "next/server";
 
 export const runtime = "edge";
+interface ImageResponseOptions {
+  width: number;
+  height: number;
+  fonts?: Array<{
+    name: string;
+    data: ArrayBuffer;
+    style?: string;
+  }>;
+}
+
+class ImageResponse {
+  constructor(jsx: JSX.Element, options: ImageResponseOptions) {
+    // Ignore TypeScript checking here, assuming it's correct
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    return new OriginalImageResponse(jsx, options);
+  }
+}
 
 const fontBold = fetch(
   new URL("../../../public/fonts/Biotif-Bold.woff", import.meta.url),
