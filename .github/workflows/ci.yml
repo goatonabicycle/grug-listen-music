@@ -25,9 +25,6 @@ jobs:
           node-version: 18
           cache: "pnpm"
 
-      - name: Clear pnpm store
-        run: pnpm store prune && pnpm cache clean --all
-
       - name: Install deps
         run: pnpm install --no-frozen-lockfile
 
@@ -51,9 +48,6 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
-
-      - name: Clear pnpm store
-        run: pnpm store prune && pnpm cache clean --all
 
       - name: Install deps
         run: pnpm install --no-frozen-lockfile
@@ -82,9 +76,6 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
-
-      - name: Clear pnpm store
-        run: pnpm store prune && pnpm cache clean --all
 
       - name: Install deps
         run: pnpm install --no-frozen-lockfile
