@@ -15,7 +15,7 @@ interface ImageResponseOptions {
 class ImageResponse {
   constructor(jsx: JSX.Element, options: ImageResponseOptions) {
     // Ignore TypeScript checking here, assuming it's correct
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // eslint-disable-next-line
     // @ts-ignore
     return new OriginalImageResponse(jsx, options);
   }
