@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: post.lastmod ?? post.date,
   }));
 
-  const routes = ["", "/pals", "/shrine"].map((route) => ({
+  const routes = ["", "/pals", "/secret", "/shrine"].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),
   }));
