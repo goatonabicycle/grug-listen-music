@@ -3,9 +3,8 @@ const Secret = () => {
     <div className="min-h-screen flex flex-col gap-4 justify-center items-center">
       <div className="px-10 py-20 text-center w-full">
         <p className="mb-4">Secret embed yay!</p>
-        
-        
-        <div className="center">
+
+        <div className="flex justify-center">
           <iframe
             src="https://ampwall.com/services/PlayerCard/v1/content/exclusive?embedId=0192c035-5f68-7650-a225-97db82245d75&controlStyle=persistent&playerWidth=350"
             style={{
@@ -14,7 +13,7 @@ const Secret = () => {
               height: "501px",
               minHeight: "492px",
             }}></iframe>
-          </div>
+        </div>
       </div>
     </div>
   );
