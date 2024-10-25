@@ -14,8 +14,7 @@ const Secret = () => {
                 minWidth: "350px",
                 height: "501px",
                 minHeight: "492px",
-              }}
-            ></iframe>
+              }}></iframe>
           </div>
 
           <div className="flex flex-col items-center">
@@ -27,8 +26,7 @@ const Secret = () => {
                 minWidth: "350px",
                 height: "501px",
                 minHeight: "492px",
-              }}
-            ></iframe>
+              }}></iframe>
           </div>
 
           <div className="flex flex-col items-center">
@@ -40,8 +38,7 @@ const Secret = () => {
                 minWidth: "350px",
                 height: "501px",
                 minHeight: "492px",
-              }}
-            ></iframe>
+              }}></iframe>
           </div>
         </div>
       </div>
