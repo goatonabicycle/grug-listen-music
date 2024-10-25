@@ -30,6 +30,19 @@ const Secret = () => {
               }}
             ></iframe>
           </div>
+
+          <div className="flex flex-col items-center">
+            <p className="mb-2">witnesses</p>
+            <iframe
+              src="https://ampwall.com/services/PlayerCard/v1/content/exclusive?embedId=0192c034-57d2-7181-85ab-8e4828ba6017&controlStyle=persistent&playerWidth=350"
+              style={{
+                width: "350px",
+                minWidth: "350px",
+                height: "501px",
+                minHeight: "492px",
+              }}
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
