@@ -19,7 +19,6 @@ const Pals = () => {
       name: "Noob Heavy",
       url: "https://noobheavy.com/",
     },
-    
     {
       name: "Mostly Metal",
       url: "https://mostly-metal.net/",
@@ -72,15 +71,15 @@ const Pals = () => {
 
   const others = [
     {
-      name: "jtextreme",
-      url: "https://jtextreme.com/",
-      description: "",
-    },
-    {
       name: "Ampwall",
       url: "https://ampwall.com/",
       description: "",
     },
+    {
+      name: "jtextreme",
+      url: "https://jtextreme.com/",
+      description: "",
+    },    
     {
       name: "sEYEmon",
       url: "https://twitter.com/sEYEmon",
