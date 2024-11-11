@@ -12,9 +12,14 @@ const Pals = () => {
       url: "https://cvltnation.com/",
     },
     {
+      name: "Cultmetalflix",
+      url: "https://cultmetalflix.wordpress.com/",
+    }, 
+    {
       name: "Noob Heavy",
       url: "https://noobheavy.com/",
     },
+    
     {
       name: "Mostly Metal",
       url: "https://mostly-metal.net/",
@@ -22,11 +27,7 @@ const Pals = () => {
     {
       name: "Toilet ov Hell",
       url: "https://toiletovhell.com/",
-    },
-    {
-      name: "Small Albums",
-      url: "https://www.smallalbums.com/",
-    },
+    },    
     {
       name: "A Closer Listen",
       url: "https://acloserlisten.com/",
@@ -34,11 +35,7 @@ const Pals = () => {
     {
       name: "Machine Music",
       url: "https://machinemusic.net/",
-    },
-    {
-      name: "Gold Flake Paint",
-      url: "https://www.goldflakepaint.co.uk/",
-    },
+    },    
     {
       name: "Angry Metal Guy",
       url: "https://www.angrymetalguy.com/",
@@ -66,11 +63,7 @@ const Pals = () => {
     {
       name: "Heavy Blog Is Heavy",
       url: "https://www.heavyblogisheavy.com/",
-    },
-    {
-      name: "Various Small Flames",
-      url: "https://varioussmallflames.co.uk/",
-    },
+    },    
     {
       name: "Can This Even Be Called Music?",
       url: "https://canthisevenbecalledmusic.com/",
@@ -81,38 +74,47 @@ const Pals = () => {
     {
       name: "jtextreme",
       url: "https://jtextreme.com/",
+      description: "",
+    },
+    {
+      name: "Ampwall",
+      url: "https://ampwall.com/",
+      description: "",
     },
     {
       name: "sEYEmon",
       url: "https://twitter.com/sEYEmon",
+      description: "",
     },
     {
       name: "KManriffs",
       url: "https://twitter.com/KManriffs",
+      description: "",
     },
     {
       name: "BeaverMosh",
       url: "https://www.youtube.com/@beavermosh4401",
+      description: "",
     },
     {
       name: "Audio Antihero",
       url: "http://audioantihero.com/",
+      description: "",
     },
     {
       name: "Fiadh Productions",
       url: "https://fiadh.bandcamp.com/",
+      description: "",
     },
     {
       name: "WereGnome Records",
       url: "https://weregnomerecords.bandcamp.com/",
-    },
-    {
-      name: "Vita Detestabilis Records",
-      url: "https://vitadetestabilisrecords.bandcamp.com/",
+      description: "",
     },
     {
       name: "Sentient Ruin Laboratories",
       url: "http://sentientruin.com/main",
+      description: "",
     },
   ];
 
@@ -133,7 +135,7 @@ const Pals = () => {
           You click. You read.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-40">
+        <div className="flex flex-wrap justify-center gap-40 text-xl">
           <div>
             <p className="mb-4">
               Pals do actual reviews and words. <br />
