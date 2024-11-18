@@ -124,7 +124,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
         )}>
         <ProseLayout className={cn("max-xl:mx-auto", "mx-auto")}>
           <MDXContent code={post.body.code} />
-          <div className="py-5">Grug Rate: 🔥🔥🔥🔥🔥 (5 out of 5 fires)</div>
+          <div className="py-5">Grug Rate: 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 (10 out of 10 fires)</div>
         </ProseLayout>
         <ScrollButton />
       </div>
