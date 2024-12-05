@@ -20,7 +20,15 @@ const Footer = () => {
       Send Grug music
       <div className="flex gap-4 justify-center">
         {/* This silly package doesn't have the bsky logo. */}
-        <a href="https://bsky.app/profile/gruglistenmusic.bsky.social" target="_blank"><img src="32px-Bluesky_Logo.svg.png" alt="Bluesky Logo" className="w-5 h-5 rounded-full" /></a>
+        <a
+          href="https://bsky.app/profile/gruglistenmusic.bsky.social"
+          target="_blank">
+          <img
+            src="32px-Bluesky_Logo.svg.png"
+            alt="Bluesky Logo"
+            className="w-5 h-5 rounded-full"
+          />
+        </a>
         {socialLinks.map((link) => (
           <Link
             key={link.href}

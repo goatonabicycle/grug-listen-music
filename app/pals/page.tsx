@@ -14,7 +14,7 @@ const Pals = () => {
     {
       name: "Cultmetalflix",
       url: "https://cultmetalflix.wordpress.com/",
-    }, 
+    },
     {
       name: "Noob Heavy",
       url: "https://noobheavy.com/",
@@ -26,7 +26,7 @@ const Pals = () => {
     {
       name: "Toilet ov Hell",
       url: "https://toiletovhell.com/",
-    },    
+    },
     {
       name: "A Closer Listen",
       url: "https://acloserlisten.com/",
@@ -34,7 +34,7 @@ const Pals = () => {
     {
       name: "Machine Music",
       url: "https://machinemusic.net/",
-    },    
+    },
     {
       name: "Angry Metal Guy",
       url: "https://www.angrymetalguy.com/",
@@ -62,7 +62,7 @@ const Pals = () => {
     {
       name: "Heavy Blog Is Heavy",
       url: "https://www.heavyblogisheavy.com/",
-    },    
+    },
     {
       name: "Can This Even Be Called Music?",
       url: "https://canthisevenbecalledmusic.com/",
@@ -79,7 +79,7 @@ const Pals = () => {
       name: "jtextreme",
       url: "https://jtextreme.com/",
       description: "",
-    },    
+    },
     {
       name: "sEYEmon",
       url: "https://twitter.com/sEYEmon",
