@@ -2,6 +2,7 @@ import config from "@/lib/siteConfig";
 import { cn } from "@/lib/utils";
 import { Mail, Instagram, Twitter, Facebook } from "iconoir-react";
 import Link from "./link";
+import Image from "@/components/image";
 
 const socialLinks = [
   { icon: Twitter, href: config.socials.twitter, title: "Twitter" },
@@ -23,11 +24,15 @@ const Footer = () => {
         <a
           href="https://bsky.app/profile/gruglistenmusic.bsky.social"
           target="_blank">
-          <img
-            src="32px-Bluesky_Logo.svg.png"
-            alt="Bluesky Logo"
-            className="w-5 h-5 rounded-full"
-          />
+          
+          <Image
+                className="inline-block mr-1"
+                src={"/images/32px-Bluesky_Logo.svg.png"}
+                 alt="Bluesky Logo"
+                priority
+                sizes="(min-width: 100px) 80vw, 80vw"
+                style={{ height: "1.5em", width: "auto" }}
+              />          
         </a>
         {socialLinks.map((link) => (
           <Link
