@@ -24,15 +24,14 @@ const Footer = () => {
         <a
           href="https://bsky.app/profile/gruglistenmusic.bsky.social"
           target="_blank">
-          
           <Image
-                className="inline-block mr-1"
-                src={"/images/32px-Bluesky_Logo.svg.png"}
-                 alt="Bluesky Logo"
-                priority
-                sizes="(min-width: 100px) 80vw, 80vw"
-                style={{ height: "1.5em", width: "auto" }}
-              />          
+            className="inline-block mr-1"
+            src={"/images/32px-Bluesky_Logo.svg.png"}
+            alt="Bluesky Logo"
+            priority
+            sizes="(min-width: 100px) 80vw, 80vw"
+            style={{ height: "1.5em", width: "auto" }}
+          />
         </a>
         {socialLinks.map((link) => (
           <Link
